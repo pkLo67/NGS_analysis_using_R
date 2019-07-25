@@ -57,7 +57,7 @@ KD_peak_size <- width(KD)
 summary(KD_peak_size)
 
 
-## Remove peaks with size larger than 10K bp
+## Remove peaks with size larger than 5K bp
 # A GRanges object can be indexed using the [] operator similar than vectors. 
 Control <- Control[width(Control) <= 5000]
 KD <- KD[width(KD) <= 5000]
