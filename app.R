@@ -1,5 +1,6 @@
-## Shiny App for DESeq2 Analysis of RNA-seq ##
-
+#----------------------------------------------------------#
+       ## Shiny App for DESeq2 Analysis of RNA-seq ##
+#----------------------------------------------------------#
 
 # Download app.R and fibrosis.RData for the demonstration of this shiny App. 
 # Put both files in a same folder.
