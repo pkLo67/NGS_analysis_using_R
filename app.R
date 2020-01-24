@@ -15,15 +15,15 @@ library(annotables)
 library(DT)
 
 
-# Load saved RData containing metadata and rawcount for RNA-seq data
+# Prepare metadata and rawcounts from RNA-seq and save them together as a RData file.
+# Put RData together with app.R in a same folder before run this App.
+# Load saved RData containing metadata and rawcounts.
 load("fibrosis.RData")
 
-# Assign the loaded metadata and rowcount data
-rawcounts <- wt_rawcounts
-metadata <- wt_metadata
 
 # Assign the condition
-cdn <- colnames(metadata[2])
+colnames(metadata) <- "condition"
+cdn <- colnames(metadata)
 conditions <- sapply(unique(metadata$condition), toString)
 cdn_1 <- conditions[1]
 cdn_2 <- conditions[2]
@@ -62,7 +62,7 @@ res <- lfcShrink(de,
 
 
 
-
+## The following code is the Shiny script for displaying interactive results
 
 # Define UI for DESeq2 application
 ui <- fluidPage(
